@@ -1,5 +1,3 @@
-
-
 // Check if the 'favouritesList' array exists in local storage, if not, create it
 if (!localStorage.getItem("favouritesList")) {
     localStorage.setItem("favouritesList", JSON.stringify([]));
@@ -360,5 +358,4 @@ function addRemoveToFavList(mealId) {
         //     showFavMealList();
         // });
     });
-    
     
