@@ -1,103 +1,174 @@
-/* Import Google Font 'Poppins' with various weights */
+/* Import Google Font 'Poppins' */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
-/* Reset styles for all elements */
+/* Global Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Styles for the body element */
+/* Body Styling */
 body {
     width: 100%;
-    background-color: grey;
-    color: white;
-    padding-top: 80px; /* ✅ Fix: Adds space below fixed navbar */
+    background-color: #444; /* Dark grey for contrast */
+    color: grey;
+    padding-top: 80px; /* Adjusted to ensure navbar space */
 }
 
-/* Styles for the header heading section */
-#heading {
-    margin-top: 100px;
-}
-
-/* Styles for the header navbar */
+/* Navbar */
 #nav {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
-                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
                 rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    position: fixed; /* ✅ Fix: Keeps navbar at the top */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: #212529; /* Dark background for visibility */
+    background: #212529; /* Dark background */
     padding: 10px 0;
 }
 
-/* Styles for the header search bar section */
-#search-bar {
-    max-width: 600px;
-    margin: auto; /* Centering */
+/* Heading Section */
+#heading {
+    margin-top: 100px;
     text-align: center;
 }
 
-/* Styles for the search input within the search bar */
-#search-bar input {
-    height: 50px;
+/* Search Bar Section */
+#search-section {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Search Bar */
+#search-bar {
+    width: 100%;
     border-radius: 20px;
 }
 
-/* Styles for the meal card */
-#card {
-    background-color: grey;
-    padding: 10px;
-    color: white;
+/* Meal Cards */
+.card {
+    background-color: #555;  /* Slightly lighter grey */
+    padding: 15px;
+    border-radius: 10px;
+    color: white;  /* Ensures visibility */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    width: 280px;  /* Fixed width */
+    max-width: 90%; /* Prevents overflow */
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Styles for images within meal cards */
-#card img {
-    border-radius: 50%;
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* Styles for the meal details container */
+/* Card Image */
+.card img {
+    width: 100%; /* Ensures proper fit */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Meal Name */
+.meal-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: white !important;  /* Ensure text is visible */
+}
+
+/* Meal Details */
+.meal-details {
+    font-size: 14px;
+    opacity: 0.9;
+    text-align: center;
+    padding: 5px;
+    color: white !important; /* Ensures visibility */
+}
+
+/* More Details Button */
+.more-details {
+    background-color: #d9534f;
+    border: none;
+    padding: 8px 12px;
+    color: grey;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.more-details:hover {
+    background-color: #c9302c;
+}
+
+/* Meal Details Section */
 #meal-details {
     width: 100%;
     padding: 20px;
     border-radius: 20px;
-    background-color: grey;
+    background-color: #666; /* Darker grey */
+    text-align: center;
 }
 
-/* Styles for the meal header within meal details */
-#meal-header {
-    width: 70%;
-    margin: auto;
-}
-
-/* Styles for thumbnail images within meal details */
-#meal-thumbail img {
+/* Meal Thumbnail */
+#meal-thumbnail img {
     height: 250px;
     width: 250px;
     border-radius: 50%;
 }
 
-/* Styles for details section within meal details */
-#details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-}
-
-/* Styles for meal instruction within meal details */
+/* Meal Instructions */
 #meal-instruction {
     margin: auto;
     text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    color: grey !important;
 }
 
-/* Styles for the favourites offcanvas */
+/* Favorites Section */
 #favourites-body {
-    background-color: #212529;
+    background-color: white;
+}
+
+/* Ensure all text inside cards is visible */
+.card, 
+.meal-name, 
+.meal-details, 
+.instructions, 
+.more-details {
+    color: grey !important;
+}
+
+/* Ensure links inside the card are visible */
+.card a {
+    color: #ffcc00; /* Bright yellow */
+    text-decoration: none;
+}
+
+/* Add a fallback in case color transparency was causing issues */
+.card * {
+    background: none !important;
+    opacity: 1 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #search-section {
+        width: 90%;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+/* Show hidden elements if they were invisible */
+.meal-name, .meal-details, .more-details {
+    display: block !important;
 }
