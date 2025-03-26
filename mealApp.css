@@ -112,17 +112,6 @@ body {
     background-color: #e64a19;
 }
 
-.btn-outline-light {
-    --bs-btn-color: red !important;  /* Change text color */
-    --bs-btn-border-color: #ff5722 !important; /* Change border color */
-    --bs-btn-hover-color: #fff !important;
-    --bs-btn-hover-bg: #ff5722 !important; /* Background on hover */
-    --bs-btn-hover-border-color: #ff5722 !important;
-    --bs-btn-disabled-color: #fff !important;
-    --bs-btn-disabled-bg: #ff5722 !important;
-    --bs-btn-disabled-border-color: #ff5722 !important;
-}
-
 /* Blog Section */
 #blog {
     background-color: #fff;
