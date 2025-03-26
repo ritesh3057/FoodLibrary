@@ -360,5 +360,20 @@ function addRemoveToFavList(mealId) {
         //     showFavMealList();
         // });
     });
+
+function updateSearchBar() {
+        let searchType = document.getElementById("searchType").value;
+        let searchInput = document.getElementById("searchInput");
+    
+        if (searchType === "category") {
+            searchInput.placeholder = "Search by Category...";
+        } else if (searchType === "meal") {
+            searchInput.placeholder = "Search by Meal Name or Ingredient...";
+        } 
+        // else if (searchType === "ingredient") {
+        //     searchInput.placeholder = "Search by Ingredient...";
+        // }
+    }
+   
     
    
