@@ -1,3 +1,5 @@
+
+
 // Check if the 'favouritesList' array exists in local storage, if not, create it
 if (!localStorage.getItem("favouritesList")) {
     localStorage.setItem("favouritesList", JSON.stringify([]));
@@ -351,7 +353,7 @@ function addRemoveToFavList(mealId) {
     document.addEventListener("DOMContentLoaded", () => {
         fetchCategories();
         showFavMealList(); // Load favorites on page load
-    
+        
         // // Ensure favorites update when the offcanvas opens
         // document.getElementById("offcanvasNavbar").addEventListener("show.bs.offcanvas", () => {
         //     console.log("showFavMealList() is being called!");
@@ -359,3 +361,4 @@ function addRemoveToFavList(mealId) {
         // });
     });
     
+   
