@@ -54,7 +54,7 @@ body {
 }
 
 /* Meal Cards */
-.card {
+/* .card {
     background-color: white;
     padding: 15px;
     border-radius: 10px;
@@ -65,19 +65,46 @@ body {
     max-width: 90%;
     margin: 15px;
     transition: transform 0.3s ease-in-out;
+} */
+
+.card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    text-align: center;
+    width: 280px;
+    max-width: 90%;
+    max-height: 400px; /* ⬅️ Added this to limit card height */
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+    display: flex; /* ⬅️ Added this */
+    flex-direction: column; /* ⬅️ Ensures content stacks properly */
+    justify-content: space-between; /* ⬅️ Prevents empty space inside card */
 }
+
 
 .card:hover {
     transform: scale(1.05);
 }
 
-/* Card Image */
+/* /* Card Image */
 .card img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+} */
+
+.card img {
+    width: 100%;
+    height: 200px; /* ⬅️ Set a fixed height to prevent variable sizing */
+    object-fit: cover;
+    border-radius: 10px;
 }
+
+
 
 /* Meal Name */
 .meal-name {
@@ -111,6 +138,23 @@ body {
 .more-details:hover {
     background-color: #e64a19;
 }
+
+.favorite-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    position: absolute; /* ⬅️ Positioned inside the card */
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.favorite-btn.active {
+    color: red; /* ⬅️ Changes color when active */
+}
+
 
 /* Blog Section */
 #blog {
