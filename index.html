@@ -77,12 +77,13 @@
           </button>
           <ul class="dropdown-menu" id="search-options">
             <li><a class="dropdown-item" href="#" onclick="setSearchType('Category')">Category</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setSearchType('Meal Name')">Meal Name</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setSearchType('Ingredient')">Ingredient</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setSearchType('Meal Name')">Meal Name/ Ingredient</a></li>
+<!--             <li><a class="dropdown-item" href="#" onclick="setSearchType('Ingredient')">Ingredient</a></li> -->
           </ul>
 
-          <span class="input-group-text" id="selectedSearchType">Category</span>
-
+<!--           <span class="input-group-text" id="selectedSearchType">Category</span>
+ -->
+          <span class="input-group-text" id="selectedSearchType" style="display: none;"></span>
           <select id="category-dropdown" class="form-control" style="display: none;" onchange="showMealList()">
             <option value="">Select a category</option>
           </select>
